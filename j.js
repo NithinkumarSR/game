@@ -18,7 +18,6 @@ document.querySelector('.check').addEventListener('click',function(){
     else {
         document.querySelector('.dis').textContent='very small input'
     }
-    console.log("hi"+ran);
     if(ran==a){
         document.querySelector('#ans').value=ran;
         let n1=document.querySelector('#high').textContent;
