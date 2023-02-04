@@ -1,12 +1,15 @@
 'use strict'
 let s=document.querySelector('#score').textContent;
+
 document.querySelector('.check').addEventListener('click',function(){
     let a=document.querySelector('.input').value;
-    
- console.log(s);
     if(a==ran){
         document.querySelector('.dis').textContent=''
         document.querySelector('.s').innerHTML='win the game';
+        let n1=document.querySelector('#high').textContent;
+        if(Number(n1)<Number(s)){
+            document.querySelector('#high').innerHTML=s;
+        }
     }
     else if(s==0){
         document.querySelector('.dis').textContent=''
@@ -20,25 +23,26 @@ document.querySelector('.check').addEventListener('click',function(){
     }
     if(ran==a){
         document.querySelector('#ans').value=ran;
-        let n1=document.querySelector('#high').textContent;
-        if(Number(n1)<Number(s)){
-        document.querySelector('#high').innerHTML=s;
-    }
+       
+
 }
     else{
         document.querySelector('#ans').value='-?-';
         document.querySelector('#score').innerHTML=s--;
     }
-
+  x=s;
 });
 let ran;
 document.querySelector('#again').addEventListener('click',function(){
      ran=Math.trunc(Math.random()*20)+1;
      document.querySelector('#score').innerHTML='20';
-     s=document.querySelector('#score').textContent;
+     console.log("hi"+ran);
+    // s=document.querySelector('#score').textContent;
      document.querySelector('.input').value=0;
-     document.querySelector('.s').innerHTML='';
+     document.querySelector('.s').innerHTML=''
+     document.querySelector('#ans').value='-?-';
     }
+    
 )
 
 
