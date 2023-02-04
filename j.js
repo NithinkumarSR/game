@@ -1,6 +1,7 @@
 'use strict'
 let s=document.querySelector('#score').textContent;
-
+let ran=Math.trunc(Math.random()*20)+1;
+console.log(ran);
 document.querySelector('.check').addEventListener('click',function(){
     let a=document.querySelector('.input').value;
     if(a==ran){
@@ -32,7 +33,7 @@ document.querySelector('.check').addEventListener('click',function(){
     }
   x=s;
 });
-let ran;
+
 document.querySelector('#again').addEventListener('click',function(){
      ran=Math.trunc(Math.random()*20)+1;
      document.querySelector('#score').innerHTML='20';
